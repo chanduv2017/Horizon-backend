@@ -1,0 +1,11 @@
+-- AlterTable
+ALTER TABLE "Comments" ALTER COLUMN "datetime_added" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "Likes" ALTER COLUMN "datetime_added" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "Post" ALTER COLUMN "image_url" DROP NOT NULL;
+
+-- AlterTable
+ALTER TABLE "SavedPosts" ALTER COLUMN "datetime_added" SET DEFAULT CURRENT_TIMESTAMP;
