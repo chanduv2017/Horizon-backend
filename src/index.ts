@@ -2,8 +2,8 @@ import { Hono } from "hono";
 import { userRouter } from "./Routes/user";
 import { blogRouter } from "./Routes/blog";
 import {cors} from "hono/cors"
+import { v2 as cloudinary } from "cloudinary";
 
-// Create the main Hono app
 
 const app = new Hono<{
   Bindings: {

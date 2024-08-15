@@ -124,6 +124,7 @@ userRouter.post("/follow", async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env?.DATABASE_URL,
   }).$extends(withAccelerate());
+
   const body = await c.req.json();
   const follower_user_id = c.get("user_id");
 
@@ -175,6 +176,7 @@ userRouter.post("/unfollow", async (c) => {
       return c.json({ message: "User not found" });
     }
 
+    
     // Delete the follow relationship
     await prisma.follow.deleteMany({
       where: {
